@@ -1,0 +1,8 @@
+void reverseArray(vector<int>& nums) {
+    int left = 0, right = nums.size() - 1;
+    while (left < right) {
+        swap(nums[left], nums[right]); // Swap elements at left and right indices
+        left++;
+        right--;
+    }
+}
