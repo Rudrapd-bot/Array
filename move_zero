@@ -1,0 +1,13 @@
+class Solution {
+public:
+    vector<int> findDuplicates(vector<int>& nums) {
+        vector<int>elements;
+        sort(nums.begin(),nums.end());
+        for(int i =1;i<nums.size();i++){
+             if (nums[i - 1] == nums[i]) { // Check for consecutive duplicates
+                elements.push_back(nums[i]); // Add the duplicate to the result vector
+            }
+        }
+        return elements;
+    }
+};
